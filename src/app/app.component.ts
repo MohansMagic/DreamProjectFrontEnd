@@ -12,7 +12,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'DreamProject';
-  data: any;
+  asanas: any;
+  health:any;
 
 
   constructor(private http: HttpClient) {}
@@ -20,8 +21,8 @@ export class AppComponent {
   fetchData() {
     this.http.get('https://yoga-10086244327.development.catalystappsail.com/asanaapi/getasanas')
       .subscribe(response => {
-        this.data = response;
-        console.log(this.data);
+        this.asanas = response;
+        console.log(this.asanas);
       }, error => {
         console.error('Error fetching data:', error);
       });
@@ -31,8 +32,8 @@ export class AppComponent {
   fetchHealth() {
     this.http.get('https://yoga-10086244327.development.catalystappsail.com/health')
       .subscribe(response => {
-        this.data = response;
-        console.log(this.data);
+        this.health = response;
+        console.log(this.health);
       }, error => {
         console.error('Error fetching data:', error);
       });

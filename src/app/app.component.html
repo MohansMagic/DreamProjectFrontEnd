@@ -1,16 +1,16 @@
 
 <button (click)="fetchData()">Fetch Data</button>
 
-<div *ngIf="data">
-  <h2>Fetched Data:</h2>
-  <pre>{{ data | json }}</pre>
+<div *ngIf="asanas">
+  <h2>Fetched asanas:</h2>
+  <pre>{{ asanas | json }}</pre>
 </div>
 
 
 
 <button (click)="fetchHealth()">Fetch Health of Backend APi</button>
 
-<div *ngIf="data">
+<div *ngIf="health">
   <h2>Health of backend api:</h2>
-  <pre>{{ data | json }}</pre>
+  <pre>{{ health | json }}</pre>
 </div>
