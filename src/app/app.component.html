@@ -5,3 +5,12 @@
   <h2>Fetched Data:</h2>
   <pre>{{ data | json }}</pre>
 </div>
+
+
+
+<button (click)="fetchHealth()">Fetch Health of Backend APi</button>
+
+<div *ngIf="data">
+  <h2>Health of backend api:</h2>
+  <pre>{{ data | json }}</pre>
+</div>

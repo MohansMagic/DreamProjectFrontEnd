@@ -27,4 +27,16 @@ export class AppComponent {
       });
   }
 
+  
+  fetchHealth() {
+    this.http.get('https://yoga-10086244327.development.catalystappsail.com/health')
+      .subscribe(response => {
+        this.data = response;
+        console.log(this.data);
+      }, error => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
+
 }
