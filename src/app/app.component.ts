@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AboutComponent } from "./about/about.component";
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -9,7 +8,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, AboutComponent,CommonModule,HttpClientModule]
+    imports: [RouterOutlet, CommonModule,HttpClientModule]
 })
 export class AppComponent {
   title = 'DreamProject';
