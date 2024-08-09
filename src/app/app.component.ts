@@ -17,7 +17,7 @@ export class AppComponent {
   asanas: any;
   health:any;
 
-  private apiUrl = 'http://localhost:9000/asanaapi/addasanasDTO23'; // Replace with your actual API endpoint
+  private apiUrl = 'https://yoga-10086244327.development.catalystappsail.com/asanaapi/addasanasDTO'; // Replace with your actual API endpoint
 
   constructor(private http: HttpClient) {}
 
