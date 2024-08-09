@@ -61,7 +61,7 @@ export class AppComponent {
   }
 
   postData(): Observable<any> {
-     const data = {asanaid: '23'}; // Replace with your actual data
+     const data = { asanaid: '2224',asananame:'MMMMM',url:'2222233' }; // Replace with your actual data
     return this.http.post(this.apiUrl, data);
   }
 
