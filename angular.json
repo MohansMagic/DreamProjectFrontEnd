@@ -55,6 +55,8 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+          },
           "configurations": {
             "production": {
               "buildTarget": "DreamProjectfrontend:build:production"

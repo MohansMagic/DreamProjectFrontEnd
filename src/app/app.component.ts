@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, CommonModule,HttpClientModule]
+    imports: [RouterOutlet, CommonModule,HttpClientModule,AboutComponent]
 })
 export class AppComponent {
   title = 'DreamProject';
   asanas: any;
   health:any;
 
+  private apiUrl = 'http://localhost:9000/asanaapi/addasanasDTO23'; // Replace with your actual API endpoint
 
   constructor(private http: HttpClient) {}
 
@@ -39,5 +42,36 @@ export class AppComponent {
       });
   }
 
+  submitData() {
+    const data = { asanaid: '2224',asananame:'MMMMM',url:'22222' }; // Replace with your actual data
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
+      response => {
+        console.log('Success!', response);
+      },
+      error => {
+        console.error('Error!', error);
+      }
+    );
+  }
+
+  postData(): Observable<any> {
+     const data = {asanaid: '23'}; // Replace with your actual data
+    return this.http.post(this.apiUrl, data);
+  }
+
+
+  fetchlocalHealth() {
+    this.http.get('http://localhost:9000/asanaapi/health')
+      .subscribe(response => {
+        this.health = response;
+        console.log(this.health);
+      }, error => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
 
 }
+
