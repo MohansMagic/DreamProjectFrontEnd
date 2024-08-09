@@ -59,6 +59,7 @@
           },
           "configurations": {
             "production": {
+              
               "buildTarget": "DreamProjectfrontend:build:production"
             },
             "development": {

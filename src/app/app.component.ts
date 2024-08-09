@@ -45,8 +45,12 @@ export class AppComponent {
   submitData() {
     const data = { asanaid: '2224',asananame:'MMMMM',url:'2222233' }; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const headers=new HttpHeaders({
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+      });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<any>(this.apiUrl, data).subscribe(
+    this.http.post<any>(this.apiUrl, data,{headers}).subscribe(
       response => {
         console.log('Success!', response);
       },
