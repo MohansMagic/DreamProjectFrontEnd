@@ -45,9 +45,9 @@ export class AppComponent {
 
   submitData() {
     const body = {
-      string1: 'Hello',
-      string2: 'Spring Boot',
-      string3: 'from Angular!'
+      asanaid: 23,
+      asananame: 'Spring Boot',
+      url: 'from Angular!'
     };
     const data = { "asanaid": "22245","asananame":"pt testing","url":"pt.com" }; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
