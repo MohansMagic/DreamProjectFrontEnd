@@ -105,8 +105,7 @@ export class AppComponent {
     const body = 'Hello, Spring Boot! {"a":"a"}'; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
-      "Content-Type": "application/json",
-      'Access-Control-Allow-Origin':'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO',
+      "Content-Type": "application/json"
       });
 
      let a = JSON.stringify(newAsana);
