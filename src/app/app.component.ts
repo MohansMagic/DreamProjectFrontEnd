@@ -107,7 +107,7 @@ export class AppComponent {
       });
 
     //  let a = JSON.stringify(newAsana);
-    this.http.post<AsanaDTO>(this.apiUrltest3,body).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest4,body).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
