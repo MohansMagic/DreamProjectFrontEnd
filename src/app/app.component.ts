@@ -22,7 +22,7 @@ export class AppComponent {
 
   private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
   private apiUrltest = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test'; // Replace with your actual API endpoint
-  private apiUrltest2 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
+  private apiUrltest2 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test2';
   constructor(private http: HttpClient) {}
 
   fetchData() {
@@ -109,7 +109,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<AsanaDTO>(this.apiUrltest2,newAsana,{headers}).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest2,body).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
