@@ -91,8 +91,8 @@ export class AppComponent {
 
     const exampleAsana: AsanaDTO= {
       asanaid: 2,
-      asananame: "Downward Dog",
-      url: "http://example.com/downward-dog"
+      asananame: 'Downward Dog',
+      url: 'http://example.com/downward-dog'
   };
   
     const body = 'Hello, Spring Boot! {"a":"a"}'; // Replace with your actual data
