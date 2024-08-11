@@ -110,6 +110,8 @@ export class AppComponent {
       });
 
     //  let a = JSON.stringify(newAsana);
+
+    console.log('body is', body);
     this.http.post<AsanaDTO>(this.apiUrltest4,body).subscribe(
       response => {
         console.log('Success  ssss!', response);
@@ -147,14 +149,18 @@ export class AppComponent {
   }
 
   Stringdtotest() {
-    let newAsana= {
-      "abc": "6",
-      "def": 'Sirasana'
-    };
+
+
+    let testingdto= {
+      "abc": "abnn",
+      "def": "aaaamm"}
       const headers=new HttpHeaders({
         "Content-Type": "application/json"
-        });    
-      this.http.post<any>(this.apiUrltest5,newAsana).subscribe(
+        });   
+        
+        console.log('testingdto! is ', testingdto);
+    
+      this.http.post<any>(this.apiUrltest5,testingdto).subscribe(
         response => {
           console.log('Success from the post!', response);
           this.test2=response;
