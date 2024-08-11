@@ -87,7 +87,7 @@ export class AppComponent {
   }
 
   submitDataTest2() {
-    const body = 'Hello, Spring Boot!'; // Replace with your actual data
+    const body = 'Hello, Spring Boot! {"a":"a"}'; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
       "Content-Type": "application/json",
