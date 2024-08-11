@@ -109,7 +109,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<AsanaDTO>(this.apiUrltest2,newAsana).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest2,newAsana,{headers}).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
