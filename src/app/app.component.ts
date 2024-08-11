@@ -156,7 +156,7 @@ export class AppComponent {
       def: 'Sirasana'
     };
       const headers=new HttpHeaders({
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
         });     
         console.log('payload! is ', payload,{headers});
 
