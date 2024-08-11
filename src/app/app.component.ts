@@ -158,7 +158,7 @@ export class AppComponent {
       const headers=new HttpHeaders({
         "Content-Type": "application/json"
         });     
-        console.log('payload! is ', payload);
+        console.log('payload! is ', payload,{headers});
 
       this.http.post<any>(this.apiUrltest5,payload).subscribe(
         response => {
