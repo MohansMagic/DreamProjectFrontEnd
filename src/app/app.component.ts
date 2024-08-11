@@ -149,17 +149,13 @@ export class AppComponent {
   }
 
   Stringdtotest() {
-
-
     let testingdto= {
-      "abc": "abnn",
-      "def": "aaaamm"}
+      "abc":"abnn","def":"aaaamm"}
       const headers=new HttpHeaders({
         "Content-Type": "application/json"
-        });   
-        
+        });     
         console.log('testingdto! is ', testingdto);
-    
+
       this.http.post<any>(this.apiUrltest5,testingdto).subscribe(
         response => {
           console.log('Success from the post!', response);
