@@ -95,10 +95,10 @@ export class AppComponent {
       url: 'http://example.com/downward-dog'
   };
 
-  let newAsana: AsanaDTO = {
-    asanaid: 6,
-    asananame: 'Sirasana',
-    url: 'https://sarvyoga.com/mayurasana-peacock-pose-steps-and-benefits23'
+  let newAsana= {
+    "asanaid": 6,
+    "asananame": 'Sirasana',
+    "url": 'https://sarvyoga.com/mayurasana-peacock-pose-steps-and-benefits23'
   };
 
   
