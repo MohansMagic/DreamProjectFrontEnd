@@ -47,7 +47,7 @@ export class AppComponent {
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
       "Content-Type": "application/json",
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
     this.http.post<any>(this.apiUrl, data,{headers}).subscribe(
@@ -61,8 +61,17 @@ export class AppComponent {
   }
 
   postData(): Observable<any> {
-     const data = { asanaid: '2224',asananame:'MMMMM',url:'2222233' }; // Replace with your actual data
-    return this.http.post(this.apiUrl, data);
+     const data = { asanaid: '2224',asananame:'MMMMM',url:'2222233' };
+     this.http.post(this.apiUrl, data).subscribe(
+      response => {
+        console.log('Success!', response);
+        this.asanas=response;
+      },
+      error => {
+        console.error('Error!', error);
+      }
+    ); // Replace with your actual data
+    return this.asanas; 
   }
 
 
