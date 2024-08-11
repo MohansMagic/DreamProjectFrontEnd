@@ -17,7 +17,7 @@ export class AppComponent {
   asanas: any;
   health:any;
 
-  private apiUrl = 'https://yoga-10086244327.development.catalystappsail.com/asanaapi/addasanasDTO'; // Replace with your actual API endpoint
+  private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO'; // Replace with your actual API endpoint
 
   constructor(private http: HttpClient) {}
 
@@ -73,7 +73,7 @@ export class AppComponent {
     ); // Replace with your actual data
     return this.asanas; 
   }
-
+ 
 
   fetchlocalHealth() {
     this.http.get('http://localhost:9000/asanaapi/health')
