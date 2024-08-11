@@ -17,7 +17,6 @@ export class AppComponent {
   title = 'DreamProject';
   asanas: any;
   health:any;
-
   test2:any;
 
   private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
@@ -26,7 +25,7 @@ export class AppComponent {
   constructor(private http: HttpClient) {}
 
   fetchData() {
-    this.http.get('https://yoga-10086244327.development.catalystappsail.com/asanaapi/getasanas')
+    this.http.get('https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/getasanas')
       .subscribe(response => {
         this.asanas = response;
         console.log(this.asanas);
@@ -108,8 +107,10 @@ export class AppComponent {
       "Content-Type": "application/json",
       'Access-Control-Allow-Origin':'*',
       });
+
+     let a = JSON.stringify(newAsana);
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<AsanaDTO>(this.apiUrltest2,body).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest2,a).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
