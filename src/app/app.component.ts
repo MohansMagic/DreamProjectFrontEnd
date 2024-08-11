@@ -106,7 +106,7 @@ export class AppComponent {
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
       "Content-Type": "application/json",
-      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Origin':'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO',
       });
 
      let a = JSON.stringify(newAsana);
