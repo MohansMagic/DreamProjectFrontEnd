@@ -97,7 +97,8 @@ export class AppComponent {
     "url": 'https://sarvyoga.com/mayurasana-peacock-pose-steps-and-benefits23'
   };
 
-  
+  this.asananame='mudra';
+  this.url='abc.com';
     const body = 'asananame:'+this.asananame+'url:'+this.url; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
