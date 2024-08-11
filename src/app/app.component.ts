@@ -26,6 +26,7 @@ export class AppComponent {
   private apiUrltest2 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test2';
   // private apiUrltest3 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
    private apiUrltest4 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/postasana';
+   private apiUrltest5 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Testing';
   constructor(private http: HttpClient) {}
 
   fetchData() {
@@ -145,6 +146,23 @@ export class AppComponent {
       });
   }
 
-
+  Stringdtotest() {
+    let newAsana= {
+      "abc": "6",
+      "def": 'Sirasana'
+    };
+      const headers=new HttpHeaders({
+        "Content-Type": "application/json"
+        });    
+      this.http.post<any>(this.apiUrltest5,newAsana).subscribe(
+        response => {
+          console.log('Success from the post!', response);
+          this.test2=response;
+        },
+        error => {
+          console.error('Error from the post!', error);
+        }
+      );
+    }
 }
 
