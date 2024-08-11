@@ -78,6 +78,24 @@ export class AppComponent {
     );
   }
 
+  submitDataTest2() {
+    const body = 'Hello, Spring Boot!'; // Replace with your actual data
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const headers=new HttpHeaders({
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin':'*',
+      });
+    //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
+    this.http.post<any>(this.apiUrl,body).subscribe(
+      response => {
+        console.log('Success  ssss!', response);
+      },
+      error => {
+        console.error('Error ssss!', error);
+      }
+    );
+  }
+
   postData(): Observable<any> {
      const data = { asanaid: '2224',asananame:'MMMMM',url:'2222233' };
      this.http.post(this.apiUrl, data).subscribe(
