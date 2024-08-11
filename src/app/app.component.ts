@@ -43,7 +43,7 @@ export class AppComponent {
   }
 
   submitData() {
-    const data = { asanaid: '22245',asananame:'pt testing',url:'pt.com' }; // Replace with your actual data
+    const data = { "asanaid": "22245","asananame":"pt testing","url":"pt.com" }; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
       "Content-Type": "application/json",
