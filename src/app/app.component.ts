@@ -94,6 +94,13 @@ export class AppComponent {
       asananame: 'Downward Dog',
       url: 'http://example.com/downward-dog'
   };
+
+  const newAsana: AsanaDTO = {
+    asanaid: 6,
+    asananame: 'Sirasana',
+    url: 'https://sarvyoga.com/mayurasana-peacock-pose-steps-and-benefits23'
+  };
+
   
     const body = 'Hello, Spring Boot! {"a":"a"}'; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
@@ -102,7 +109,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<AsanaDTO>(this.apiUrltest2,exampleAsana).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest2,newAsana).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
