@@ -23,7 +23,8 @@ export class AppComponent {
   private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
   private apiUrltest = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test'; // Replace with your actual API endpoint
   private apiUrltest2 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test2';
-  private apiUrltest3 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
+  // private apiUrltest3 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
+   private apiUrltest4 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/postasana';
   constructor(private http: HttpClient) {}
 
   fetchData() {
