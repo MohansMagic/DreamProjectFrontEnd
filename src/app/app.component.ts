@@ -50,7 +50,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<any>(this.apiUrl, data,{headers}).subscribe(
+    this.http.post<any>(this.apiUrl, data).subscribe(
       response => {
         console.log('Success!', response);
       },
