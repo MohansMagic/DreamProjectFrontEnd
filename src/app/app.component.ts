@@ -44,6 +44,11 @@ export class AppComponent {
   }
 
   submitData() {
+    const body = {
+      string1: 'Hello',
+      string2: 'Spring Boot',
+      string3: 'from Angular!'
+    };
     const data = { "asanaid": "22245","asananame":"pt testing","url":"pt.com" }; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
@@ -51,7 +56,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<any>(this.apiUrl, data).subscribe(
+    this.http.post<any>(this.apiUrl, body).subscribe(
       response => {
         console.log('Success!', response);
       },
