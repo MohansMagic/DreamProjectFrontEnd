@@ -149,8 +149,7 @@ export class AppComponent {
   }
 
   Stringdtotest() {
-    let testingdto= {
-      "abc":"abnn","def":"aaaamm"}
+    let testingdto= {"abc":"abnn","def":"aaaamm"}
       const headers=new HttpHeaders({
         "Content-Type": "application/json"
         });     
