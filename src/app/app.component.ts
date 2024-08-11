@@ -17,6 +17,8 @@ export class AppComponent {
   asanas: any;
   health:any;
 
+  test2:any;
+
   private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
   private apiUrltest = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test'; // Replace with your actual API endpoint
   private apiUrltest2 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test2';
@@ -95,6 +97,7 @@ export class AppComponent {
     this.http.post<any>(this.apiUrltest2,body).subscribe(
       response => {
         console.log('Success  ssss!', response);
+        this.test2=response;
       },
       error => {
         console.error('Error ssss!', error);
