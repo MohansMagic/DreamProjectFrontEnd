@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { Observable } from 'rxjs';
+import { AsanaDTO } from './asana';
 
 @Component({
     selector: 'app-root',
@@ -87,6 +88,13 @@ export class AppComponent {
   }
 
   submitDataTest2() {
+
+    const exampleAsana: AsanaDTO= {
+      asanaid: 2,
+      asananame: "Downward Dog",
+      url: "http://example.com/downward-dog"
+  };
+  
     const body = 'Hello, Spring Boot! {"a":"a"}'; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
@@ -94,7 +102,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*',
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<any>(this.apiUrltest2,body).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest2,exampleAsana).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
