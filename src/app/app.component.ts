@@ -17,7 +17,7 @@ export class AppComponent {
   asanas: any;
   health:any;
 
-  private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO'; // Replace with your actual API endpoint
+  private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test'; // Replace with your actual API endpoint
 
   constructor(private http: HttpClient) {}
 
@@ -51,6 +51,24 @@ export class AppComponent {
       });
     //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
     this.http.post<any>(this.apiUrl, data).subscribe(
+      response => {
+        console.log('Success!', response);
+      },
+      error => {
+        console.error('Error!', error);
+      }
+    );
+  }
+
+  submitDataTest() {
+    const data = { "asanaid": "22245","asananame":"pt testing","url":"pt.com" }; // Replace with your actual data
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const headers=new HttpHeaders({
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin':'*',
+      });
+    //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
+    this.http.post<any>(this.apiUrl,null).subscribe(
       response => {
         console.log('Success!', response);
       },
