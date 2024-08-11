@@ -18,7 +18,8 @@ export class AppComponent {
   asanas: any;
   health:any;
   test2:any;
-
+  asananame!: String;
+  url!:string;
   private apiUrl = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/addasanasDTO';
   private apiUrltest = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test'; // Replace with your actual API endpoint
   private apiUrltest2 = 'https://yogaapi-10086380608.development.catalystappsail.com/asanaapi/Test2';
@@ -89,11 +90,6 @@ export class AppComponent {
 
   submitDataTest2() {
 
-    const exampleAsana: AsanaDTO= {
-      asanaid: 2,
-      asananame: 'Downward Dog',
-      url: 'http://example.com/downward-dog'
-  };
 
   let newAsana= {
     "asanaid": 6,
@@ -102,15 +98,14 @@ export class AppComponent {
   };
 
   
-    const body = 'Hello, Spring Boot! {"a":"a"}'; // Replace with your actual data
+    const body = 'asananame:'+this.asananame+'url:'+this.url; // Replace with your actual data
     // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const headers=new HttpHeaders({
       "Content-Type": "application/json"
       });
 
      let a = JSON.stringify(newAsana);
-    //this.http.post<any>(this.apiUrl, data, { headers }).subscribe(
-    this.http.post<AsanaDTO>(this.apiUrltest3,a,{headers}).subscribe(
+    this.http.post<AsanaDTO>(this.apiUrltest3,a).subscribe(
       response => {
         console.log('Success  ssss!', response);
         this.test2=response;
