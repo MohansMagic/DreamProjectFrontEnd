@@ -8,11 +8,7 @@ import { DataDto } from './app.model';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, HttpClientModule],
-  template: `
-    <h1>Angular Spring Boot POST Request</h1>
-    <button (click)="sendPostRequest()">Send POST Request</button>
-    <p>Response: {{ response | json }}</p>
-  `,
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   private http = inject(HttpClient);
