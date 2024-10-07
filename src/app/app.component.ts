@@ -24,4 +24,12 @@ export class AppComponent {
       err => console.error('Error:', err)
     );
   }
+
+  Sendgetreq() {
+   
+    this.http.get<any>('https://yogasanas-10089379509.development.catalystappsail.com/health').subscribe(
+      res => this.response = res,
+      err => console.error('Error:', err)
+    );
+  }
 }
