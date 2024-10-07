@@ -34,8 +34,10 @@ export class AppComponent {
   }
 
   Post() {
-    const body = {"asanaid":22
-     };
+    const body = {
+      "asanaid":22,
+      "asananame":""
+  }
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'// Example of an authorization header
