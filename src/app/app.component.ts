@@ -54,10 +54,6 @@ export class AppComponent {
 
   string() {
     this.abc="mohan";
-
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'// Example of an authorization header
-    });
     
     this.http.post<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/String',this.abc).subscribe(
       res => this.response = res,
