@@ -34,6 +34,13 @@ export class AppComponent {
     );
   }
 
+  Sendgetreq2() {
+   
+    this.http.get<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/AddYogasanathruget/mohane/abc.dceom/30').subscribe(
+      res => this.response = res,
+      err => console.error('Error:', err)
+    );
+  }
   Post() {
     const body = {
       "asanaid":22,
