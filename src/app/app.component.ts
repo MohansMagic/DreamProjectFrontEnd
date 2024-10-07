@@ -48,4 +48,26 @@ export class AppComponent {
       err => console.error('Error:', err)
     );
   }
+
+  Post2() {
+    const url = 'https://jsonplaceholder.typicode.com/posts'; // Demo API endpoint
+    const body = {
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    };
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json', // Set content type
+    });
+
+    this.http.post(url, body, { headers }).subscribe(
+      response => {
+        console.log('Success:', response);
+      },
+      error => {
+        console.error('Error:', error);
+      }
+    );
+  }
 }
