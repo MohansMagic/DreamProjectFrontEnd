@@ -36,7 +36,8 @@ export class AppComponent {
   Post() {
     const body = {
       "asanaid":22,
-      "asananame":""
+      "asananame":"ammm",
+      "url":"aaaa.com"
   }
 
     const headers = new HttpHeaders({
