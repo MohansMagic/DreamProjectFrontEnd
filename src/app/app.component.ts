@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { DataDto } from './app.model';
 
 
@@ -34,7 +34,14 @@ export class AppComponent {
   }
 
   Post() {
-    this.http.post<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/AddYogasana','').subscribe(
+    const body = { title: 'Angular POST Request Example' };
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json', // Set content type
+      'Authorization': 'Bearer your-token', // Example of an authorization header
+    });
+    
+    this.http.post<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
       res => this.response = res,
       err => console.error('Error:', err)
     );
