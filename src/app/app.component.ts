@@ -32,4 +32,11 @@ export class AppComponent {
       err => console.error('Error:', err)
     );
   }
+
+  Post() {
+    this.http.post<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/AddYogasana','').subscribe(
+      res => this.response = res,
+      err => console.error('Error:', err)
+    );
+  }
 }
