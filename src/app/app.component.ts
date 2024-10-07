@@ -37,7 +37,7 @@ export class AppComponent {
     const body = {"asanaid":22
      };
 
-    const headers = new HttpHeaders({a
+    const headers = new HttpHeaders({
       'Content-Type': 'application/json'// Example of an authorization header
     });
     
