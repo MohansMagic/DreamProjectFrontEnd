@@ -34,7 +34,10 @@ export class AppComponent {
   }
 
   Post() {
-    const body = { title: 'Angular POST Request Example' };
+    const body = { asanaid: 23,
+      asananame:'annn',
+      url:'www.magic.com'
+     };
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'// Example of an authorization header
