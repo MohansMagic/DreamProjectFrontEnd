@@ -37,8 +37,7 @@ export class AppComponent {
     const body = { title: 'Angular POST Request Example' };
 
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json', // Set content type
-      'Authorization': 'Bearer your-token', // Example of an authorization header
+      'Content-Type': 'application/json'// Example of an authorization header
     });
     
     this.http.post<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
