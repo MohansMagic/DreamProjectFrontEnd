@@ -34,12 +34,10 @@ export class AppComponent {
   }
 
   Post() {
-    const body = { asanaid: 23,
-      asananame:'annn',
-      url:'www.magic.com'
+    const body = {"asanaid":22
      };
 
-    const headers = new HttpHeaders({
+    const headers = new HttpHeaders({a
       'Content-Type': 'application/json'// Example of an authorization header
     });
     
