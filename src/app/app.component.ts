@@ -28,7 +28,7 @@ export class AppComponent {
 
   Sendgetreq() {
    
-    this.http.get<any>('https://yogasanas-10089379509.development.catalystappsail.com/health').subscribe(
+    this.http.get<any>('https://fullstackbackend-10089494602.development.catalystappsail.com/health').subscribe(
       res => this.response = res,
       err => console.error('Error:', err)
     );
@@ -43,16 +43,16 @@ export class AppComponent {
   }
   Post() {
     const body = {
-      "asanaid":22,
-      "asananame":"ammm",
-      "url":"aaaa.com"
+      "asanaid":999,
+      "asananame":"mk",
+      "url":"aaassa.com"
   }
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'// Example of an authorization header
     });
     
-    this.http.post<any>('https://yogasanas-10089379509.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
+    this.http.post<any>('https://fullstackbackend-10089494602.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
       res => this.response = res,
       err => console.error('Error:', err)
     );
