@@ -35,7 +35,7 @@ export class AppComponent {
    //this.http.get<any>('https://fullstackbackend-10089494602.development.catalystappsail.com/health',{headers}).subscribe(
     this.http.get<any>('https://10octyoga-10089526778.development.catalystappsail.com/health').subscribe(
       // res => this.response = res,
-      res => console.log('response',this.response),
+      res => console.log('response',this.response=res),
       // console.log('response',this.response)
       err => console.error('Error:', err)
     );
