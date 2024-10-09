@@ -27,6 +27,7 @@ export class AppComponent {
   }
 
   Sendgetreq() {
+    this.response="";
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'// Example of an authorization header
     });
