@@ -85,7 +85,8 @@ export class AppComponent {
     };
 
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json', // Set content type
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin':'*' // Set content type
     });
 
     this.http.post(url, body, { headers }).subscribe(
