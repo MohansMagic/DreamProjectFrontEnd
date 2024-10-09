@@ -1,7 +1,8 @@
 {
-    "/api": {
-      "target": "https://yoga-10086244327.development.catalystappsail.com",
-      "secure": false,       
-      "changeOrigin": true, 
-      "pathRewrite": {
-        "^/api": ""}}}
+  "/api": {
+    "target": "https://10octyoga-10089526778.development.catalystappsail.com", // Replace with your API URL
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
