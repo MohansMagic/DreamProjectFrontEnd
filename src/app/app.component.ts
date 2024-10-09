@@ -94,4 +94,24 @@ export class AppComponent {
       }
     );
   }
+
+
+
+
+  posting() {
+    const body = {
+      "asanaid":239,
+      "asananame":"magicmohanchess",
+      "url":"chess.com"
+  }
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'// Example of an authorization header
+    });
+    
+    this.http.post<any>('https://10octyoga-10089526778.development.catalystappsail.com/AddYogasana',body,{headers}).subscribe(
+      res => this.response = res,
+      err => console.error('Error:', err)
+    );
+  }
 }
