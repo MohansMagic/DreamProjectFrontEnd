@@ -13,3 +13,9 @@
 <button (click)="Post2()">Post2</button>
 <button (click)="string()">string</button>
 {{response}}
+
+
+<div *ngFor="let responses of response">
+    Organism: <b>{{ responses}}</b>
+  </div>
+  
