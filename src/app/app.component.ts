@@ -27,8 +27,12 @@ export class AppComponent {
   }
 
   Sendgetreq() {
-   
-    this.http.get<any>('https://fullstackbackend-10089494602.development.catalystappsail.com/health').subscribe(
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'// Example of an authorization header
+    });
+   //https://10octyoga-10089526778.development.catalystappsail.com/health
+   //this.http.get<any>('https://fullstackbackend-10089494602.development.catalystappsail.com/health',{headers}).subscribe(
+    this.http.get<any>('https://10octyoga-10089526778.development.catalystappsail.com/health').subscribe(
       res => this.response = res,
       err => console.error('Error:', err)
     );
