@@ -114,8 +114,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'https://asanasapp.netlify.app'// Example of an authorization header
     });
     
-    this.http.post<any>('https://10octyoga-10089526778.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
-      res => console.log('response',this.response=res)
+    this.http.post<any>('https://10octyoga-10089526778.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(res => console.log('response',this.response=res)
     );
   }
 }
