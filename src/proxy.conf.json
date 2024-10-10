@@ -1,8 +1,0 @@
-{
-  "/api": {
-    "target": "https://10octyoga-10089526778.development.catalystappsail.com", // Replace with your API URL
-    "secure": false,
-    "changeOrigin": true,
-    "logLevel": "debug"
-  }
-}
