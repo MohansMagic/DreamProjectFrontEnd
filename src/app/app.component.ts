@@ -115,8 +115,7 @@ export class AppComponent {
     });
     
     this.http.post<any>('https://10octyoga-10089526778.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
-      res => this.response = res,
-      err => console.error('Error:', err)
+      res => console.log('response',this.response=res)
     );
   }
 }
