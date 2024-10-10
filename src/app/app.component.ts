@@ -13,7 +13,7 @@ export class AppComponent {
   abc!: String;
   BackEndApiHealth() {
     this.response="";
-    this.http.get<any>('https://fullstackbackend-10089494602.development.catalystappsail.com/health').subscribe(
+    this.http.get<any>('https://10octyoga-10089526778.development.catalystappsail.com/health').subscribe(
       res => console.log('response',this.response=res),
       err => console.error('Error:', err)
     );
