@@ -1,23 +1,8 @@
-<h1>hello</h1>
-<h1>lets begin</h1>
-<button (click)="Sendgetreq()">Sendgetreq</button>
+<h1>Development Time : </h1>
+<h1>Development Type : </h1>
 
-<button (click)="posting()">posting data to db</button>
+<button (click)="BackEndApiHealth()">BackEndAPIHealth</button>
 
-<button (click)="Sendgetreq2()">Sendgetreq2</button>
-{{response}}
-<!-- {{response.get(0)}} -->
+<button (click)="AddYogasanatoDB()">Add New Yogasana</button>
 
-<h1>hello</h1>
-<button (click)="Post()">Post</button>
-
-<button (click)="Post2()">Post2</button>
-<button (click)="string()">string</button>
-{{response}}
-{{response.key}}
-{{response.anotherkey}}
-
-<div *ngFor="let responses of response">
-    Organism: <b>{{ responses}}</b>
-  </div>
-  
+The response received from BackEnd is - {{response}}
