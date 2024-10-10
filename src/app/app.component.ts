@@ -114,7 +114,7 @@ export class AppComponent {
       'Access-Control-Allow-Origin':'*'// Example of an authorization header
     });
     
-    this.http.post<any>('https://10octyoga-10089526778.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
+    this.http.post<any>('https://10octyoga-10089526778.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
       res => this.response = res,
       err => console.error('Error:', err)
     );
