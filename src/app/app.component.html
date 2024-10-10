@@ -3,6 +3,42 @@
 
 <button (click)="BackEndApiHealth()">BackEndAPIHealth</button>
 
+<form (ngSubmit)="submitForm()">
+  <label for="asanaid">Asana ID:</label>
+  <input type="number" id="asanaid" [(ngModel)]="asanaid" name="asanaid" required>
+
+  <label for="asananame">Asana Name:</label>
+  <input type="text" id="asananame" [(ngModel)]="asananame" name="asananame" required>
+
+  <label for="url">URL:</label>
+  <input type="text" id="url" [(ngModel)]="url" name="url" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+<h2>List of Asanas</h2>
+<button (click)="FetchAllasanas()">Fetch Asanas</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asana of asanas">
+      <td>{{ asana.asanaid }}</td>
+      <td>{{ asana.asananame }}</td>
+      <td><a [href]="asana.url" target="_blank">{{ asana.url }}</a></td>
+    </tr>
+  </tbody>
+</table>
+
 <button (click)="AddYogasanatoDB()">Add New Yogasana</button>
 
-The response received from BackEnd is - {{response}}
+The response received from BackEnd Health End Point is - {{healthresponse}}
+
+The response received from BackEnd Add Yogasana End Point is - {{addyogasanaresponse}}
