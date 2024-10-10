@@ -110,7 +110,8 @@ export class AppComponent {
   }
 
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json'// Example of an authorization header
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin':'*'// Example of an authorization header
     });
     
     this.http.post<any>('https://10octyoga-10089526778.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
