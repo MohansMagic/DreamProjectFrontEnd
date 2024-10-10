@@ -111,7 +111,7 @@ export class AppComponent {
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin':'*'// Example of an authorization header
+      'Access-Control-Allow-Origin':'https://asanasapp.netlify.app'// Example of an authorization header
     });
     
     this.http.post<any>('https://10octyoga-10089526778.development.catalystappsail.com/Yogasana/AddYogasana',body,{headers}).subscribe(
